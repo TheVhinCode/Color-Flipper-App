@@ -1,0 +1,82 @@
+:root {
+    --btn-color-b: linear-gradient(135deg, #00c6ff, #0072ff);
+    --btn-color-b-hover: linear-gradient(135deg, #0097d1, #0055c4);
+    --btn-color-r: linear-gradient(135deg, #ff4b2b, #e62d58);
+    --btn-color-r-hover: linear-gradient(135deg, #e03e1b, #c92045);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 10px hsl(0, 0%, 78%),
+                -2px -2px 10px hsl(0, 0%, 78%);
+}
+
+#hex-color {
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+
+.btn-container {
+    display: flex;
+    gap: 4rem;
+}
+
+#color-btn,
+#reset-btn {
+    font-size: 1.6rem;
+    padding: 1rem 1.6rem;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.6s ease, transform 0.2s ease;
+}
+
+/* Blue button */
+#color-btn {
+    background: var(--btn-color-b);
+}
+#color-btn:hover {
+    background: var(--btn-color-b-hover);
+    transform: scale(1.05);
+}
+
+/* Red button */
+#reset-btn {
+    background: var(--btn-color-r);
+}
+#reset-btn:hover {
+    background: var(--btn-color-r-hover);
+    transform: scale(1.05);
+}
